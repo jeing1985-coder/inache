@@ -202,8 +202,9 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-dock .s-btn:first-child { flex: 1.7; }
 }
 
-/* компактный виджет на десктопе – первый экран влезает без скролла */
+/* правки первого экрана на десктопе */
 @media (min-width: 961px) {
+  /* виджет компактнее */
   .s-widget { padding: 16px; gap: 10px; }
   .s-widget__title { font-size: 1.05rem; }
   .s-widget legend { margin-bottom: 4px; }
@@ -211,11 +212,9 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-widget .s-chip { min-height: 34px; padding: 4px 12px; font-size: .86rem; }
   .s-bubble { padding: 8px 12px; margin-left: 12px; }
   .s-bubble p { font-size: .86rem; line-height: 1.4; }
-}
-
-/* первый экран целиком на десктопе – заголовок меньше, фото ограничено по высоте */
-@media (min-width: 961px) {
-  .s-hero h1 { font-size: calc(clamp(2rem, 3.4vw, 2.9rem) * var(--h1k, 1)); }
-  .s-hero__photo { margin-top: 18px; }
-  .s-hero__photo img { aspect-ratio: auto; height: clamp(190px, 24vh, 270px); }
+  /* убрали рейтинг из hero, фото стало больше */
+  .s-hero h1 { font-size: calc(clamp(2.2rem, 3.8vw, 3.3rem) * var(--h1k, 1)); }
+  .s-hero .s-rating { display: none; }
+  .s-hero__photo { margin-top: 24px; }
+  .s-hero__photo img { aspect-ratio: auto; height: clamp(260px, 40vh, 420px); }
 }
