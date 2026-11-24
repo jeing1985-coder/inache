@@ -212,9 +212,11 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-widget .s-chip { min-height: 34px; padding: 4px 12px; font-size: .86rem; }
   .s-bubble { padding: 8px 12px; margin-left: 12px; }
   .s-bubble p { font-size: .86rem; line-height: 1.4; }
-  /* убрали рейтинг из hero, фото стало больше */
+  /* фото стало больше */
   .s-hero h1 { font-size: calc(clamp(2.2rem, 3.8vw, 3.3rem) * var(--h1k, 1)); }
-  .s-hero .s-rating { display: none; }
   .s-hero__photo { margin-top: 24px; }
   .s-hero__photo img { aspect-ratio: auto; height: clamp(260px, 40vh, 420px); }
 }
+
+/* рейтинг убран из первого экрана */
+.s-hero .s-rating { display: none; }
