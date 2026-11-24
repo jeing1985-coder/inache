@@ -212,3 +212,10 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-bubble { padding: 8px 12px; margin-left: 12px; }
   .s-bubble p { font-size: .86rem; line-height: 1.4; }
 }
+
+/* первый экран целиком на десктопе – заголовок меньше, фото ограничено по высоте */
+@media (min-width: 961px) {
+  .s-hero h1 { font-size: calc(clamp(2rem, 3.4vw, 2.9rem) * var(--h1k, 1)); }
+  .s-hero__photo { margin-top: 18px; }
+  .s-hero__photo img { aspect-ratio: auto; height: clamp(190px, 24vh, 270px); }
+}
