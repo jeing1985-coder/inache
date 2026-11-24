@@ -201,3 +201,14 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-dock .s-btn { flex: 1; min-height: 48px; font-size: .88rem; padding: 0 .9em; white-space: nowrap; }
   .s-dock .s-btn:first-child { flex: 1.7; }
 }
+
+/* компактный виджет на десктопе – первый экран влезает без скролла */
+@media (min-width: 961px) {
+  .s-widget { padding: 16px; gap: 10px; }
+  .s-widget__title { font-size: 1.05rem; }
+  .s-widget legend { margin-bottom: 4px; }
+  .s-widget .s-chips { gap: 6px; }
+  .s-widget .s-chip { min-height: 34px; padding: 4px 12px; font-size: .86rem; }
+  .s-bubble { padding: 8px 12px; margin-left: 12px; }
+  .s-bubble p { font-size: .86rem; line-height: 1.4; }
+}
