@@ -81,10 +81,9 @@
       if (firstFree) timesBox.insertAdjacentHTML("beforeend", `<p class="s-demo">На сегодня окна закончились – выберите другой день.</p>`);
     };
     const update = () => {
-      const s = booking.querySelector("input[name=svc]:checked"), d = daysBox.querySelector("input:checked"), t = timesBox.querySelector("input:checked"), m = booking.querySelector("input[name=mst]:checked");
+      const s = booking.querySelector("input[name=svc]:checked"), d = daysBox.querySelector("input:checked"), t = timesBox.querySelector("input:checked");
       const price = s && s.dataset.price ? " (" + (s.dataset.from ? "от " : "") + rub(+s.dataset.price) + ")" : "";
-      const master = m && m.dataset.name !== "Любой мастер" ? ", мастер: " + m.dataset.name : "";
-      setMessage(booking.dataset.message.replace("{услуга}", s ? s.dataset.name + price : "").replace("{мастер}", master).replace("{день}", d ? d.dataset.full : "").replace("{время}", t ? t.value : "время уточню"));
+      setMessage(booking.dataset.message.replace("{услуга}", s ? s.dataset.name + price : "").replace("{день}", d ? d.dataset.full : "").replace("{время}", t ? t.value : "время уточню"));
     };
     daysBox.addEventListener("change", () => { drawTimes(); update(); });
     booking.addEventListener("change", update);
